@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contato</title>
+    <link rel="stylesheet" href="css/contato.css">
+</head>
+<body>
+
+    <header>
+
+        <div class="header-content">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo">
+            </div>
+            <div class="header-title">
+                <h1>OK SCHOOL</h1>
+            </div>
+        </div>
+        <div class="divider-line"></div> 
+    
+        <nav class="menu">
+            <a href="index.html" class="home">HOME</a>
+            <a href="atividades.html" class="atividades">ATIVIDADES</a>
+            <a href="noticias.html" class="noticias">NOTÍCIAS</a>
+            <a href="recursos.html" class="estudo-de-caso">RECURSOS</a>            <div class="submenu">
+                <a href="planos.html" class="planos">NOSSOS PLANOS</a>
+                <div class="submenu-conteudo">
+                    <a href="colaboradores.html">COLABORADORES</a>
+                </div>
+            </div>
+            <a href="contato.html" class="contato">CONTATO</a>
+            <a href="php/sobre_nos.php" class="sobre-nos">SOBRE NÓS</a>
+            <a href="configuracoes.html" class="configuracoes">CONFIGURAÇÕES</a>
+            <a href="ajuda.html" class="ajuda">AJUDA</a>
+        </nav>
+
+
+    </header>
+
+    <section class="form-section">
+        <div class="container">
+            <h1 class="titulo">Entre em Contato Conosco!</h1>
+            <p class="descricao">
+                Estamos aqui para ouvir suas dúvidas, sugestões e ideias sobre como promover a educação inclusiva em nossas escolas.
+                Sua participação é fundamental para o sucesso dessa iniciativa!
+            </p>
+
+
+
+            <form id="contatoForm" action="php/enviar_email.php" method="POST">
+
+
+                <fieldset>
+                    <legend>FORMULÁRIO DE CONTATO</legend>
+
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Insira seu e-mail para contato" required>
+
+                    <label for="telefone">Telefone (opcional):</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Insira seu telefone">
+
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Compartilhe suas dúvidas ou sugestões" required></textarea>
+
+                    <button type="submit" class="botao-enviar">Enviar</button>
+                </fieldset>
+            </form>
+            <p id="status"></p>
+        </div>
+    </section>
+
+    <section class="contato-container">
+        <h1 class="contato-titulo">
+            <span class="titulo-principal">Informações de Contato!</span>
+        </h1>
+        <p class="descricao">
+            Clique para copiar 
+        </p>
+        <div class="contato-info">
+            <div class="contato-item contato-email">
+                <label for="email">E-mail:</label>
+                <input type="text" id="emailContato" class="input-campo" value="okschoolplataformadigital@gmail.com" readonly onclick="copiarTexto('emailContato')">
+            </div>
+            
+            <div class="contato-item contato-telefone">
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefoneContato" class="input-campo" value="(31) 98732-1025" readonly onclick="copiarTexto('telefoneContato')">
+            </div>
+            
+            <div class="contato-item contato-endereco">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" class="input-campo" value="R. Santa Cruz, 546 - Barroca, Belo Horizonte" readonly onclick="copiarTexto('endereco')">
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-decorator"></div>
+        <div class="container2">
+            <ul class="footer-links">
+                <li><a href="index.html">Homes</a></li>
+                <li><a href="php/sobre_nos.php">Sobre Nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="atividade.html">Atividades</a></li>
+                <li><a href="noticia.html">Noticias</a></li>
+                <li><a href="resursos.html">Recursos</a></li>
+                <li><a href="colaboradores.html">Colaboradores</a></li>
+                <li><a href="planos.html">Nossos Planos</a></li>
+            </ul>
+            <div class="footer-info">
+                <p>© 2024 OkSchool. Todos os direitos reservados.</p>
+                <p>Contato: okschoolplataformadigital@gmail.com
+                    | (31) 98732-1025</p>
+                <div class="social-media">
+                    <a href="https://www.instagram.com/okschool_?igsh=MXdzNGM1d285Mm9idw=="><img src="img/insta.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/contato.js"></script>
+</body>

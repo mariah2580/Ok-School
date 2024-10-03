@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white; /* padrão claro */
+    color: black;
+}
+
+body.escuro {
+    background-color: #121212; /* fundo escuro */
+    color: white; /* texto claro */
+}
+
+a {
+    color: blue; /* cor de link padrão */
+}
+
+body.escuro a {
+    color: #bb86fc; /* cor de link no modo escuro */
+}

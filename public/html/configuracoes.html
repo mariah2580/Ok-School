@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Configurações</title>
+    <link rel="stylesheet" href="css/configuracoes.css">
+</head>
+<body class="<?php session_start(); echo $_SESSION['tema']; ?>">
+
+    <h1>Página de Configurações</h1>
+    
+    <form action="php/configuracoes.php" method="POST">
+        <label>
+            <input type="radio" name="tema" value="claro" <?php if ($_SESSION['tema'] == 'claro') echo 'checked'; ?>> Modo Claro
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="tema" value="escuro" <?php if ($_SESSION['tema'] == 'escuro') echo 'checked'; ?>> Modo Escuro
+        </label>
+        <br>
+        <button type="submit">Salvar Configurações</button>
+    </form>
+
+    <script src="js/configuracoes.js"></script>
+</body>
+</html>
