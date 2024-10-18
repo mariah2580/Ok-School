@@ -42,6 +42,27 @@ if ($conn->query($sql) === TRUE) {
     echo "Erro ao criar a tabela: " . $conn->error;
 }
 
+// Cria a tabela de eventos
+    $tableSql = "
+        CREATE TABLE IF NOT EXISTS events (
+            id INT(11) AUTO_INCREMENT PRIMARY KEY,
+            title VARCHAR(255) NOT NULL,
+            description TEXT,
+            event_date DATE NOT NULL
+        );
+    ";
+    $pdo->exec($tableSql);
+    echo "Tabela 'events' criada com sucesso.<br>";
+
+    // Inserindo dados de exemplo na tabela
+    $insertSql = "
+        INSERT INTO events (title, description, event_date) VALUES
+        ('Webinar de Educação Inclusiva', 'Uma discussão sobre as melhores práticas de inclusão nas escolas.', '2024-10-25'),
+        ('Palestra: Educação para Todos', 'Discussão com especialistas sobre inclusão e equidade no ensino.', '2024-11-10');
+    ";
+    $pdo->exec($insertSql);
+    echo "Dados de exemplo inseridos com sucesso.<br>";
+
 // Fechando a conexão
 $conn->close();
 ?>
